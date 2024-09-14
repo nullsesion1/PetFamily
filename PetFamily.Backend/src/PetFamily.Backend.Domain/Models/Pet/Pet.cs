@@ -35,7 +35,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 		public bool IsVaccinated { get; private set; }
 		//Статус помощи - Нуждается в помощи/Ищет дом/Нашел дом
 		public PetHelpStatusEnum HelpStatus { get; private set; }
-		public PaymentInfo PaymentInfo { get; private set; }
+		public List<PaymentInfo> PaymentsInfo { get; private set; }
 		//Дата создания
 		public DateTime Created { get; private set; }
 
@@ -55,7 +55,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 			, DateOnly birthOfDate
 			, bool isVaccinated
 			, PetHelpStatusEnum helpStatus
-			, PaymentInfo paymentInfo
+			, List<PaymentInfo> paymentsInfo
 			, DateTime created
 			)
 		{
@@ -74,7 +74,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 			BirthOfDate = birthOfDate;
 			IsVaccinated = isVaccinated;
 			HelpStatus = helpStatus;
-			PaymentInfo = paymentInfo;
+			PaymentsInfo = paymentsInfo;
 			Created = created;
 		}
 
@@ -94,7 +94,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 			, DateOnly birthOfDate
 			, bool isVaccinated
 			, PetHelpStatusEnum helpStatus
-			, PaymentInfo paymentInfo
+			, List<PaymentInfo> paymentsInfo
 			, DateTime created)
 		{
 			if (string.IsNullOrWhiteSpace(name))
@@ -123,7 +123,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 				, birthOfDate
 				, isVaccinated
 				, helpStatus
-				, paymentInfo
+				, paymentsInfo
 				, created));
 		}
 	}
