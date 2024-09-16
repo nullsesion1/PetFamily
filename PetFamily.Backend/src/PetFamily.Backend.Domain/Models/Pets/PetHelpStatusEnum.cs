@@ -1,4 +1,4 @@
-﻿namespace PetFamily.Backend.Domain.Models.Pet;
+﻿namespace PetFamily.Backend.Domain.Models.Pets;
 
 /// <summary>
 /// https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags

@@ -1,7 +1,8 @@
 ﻿using CSharpFunctionalExtensions;
-using PetFamily.Backend.Domain.Models.Payments;
+using PetFamily.Backend.Domain.Models.Pets;
+using PetFamily.Backend.Domain.Models.ValueObject;
 
-namespace PetFamily.Backend.Domain.Models.Pet
+namespace PetFamily.Backend.Domain.Models.Pets
 {
 	public class Pet
 	{
@@ -35,7 +36,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 		public bool IsVaccinated { get; private set; }
 		//Статус помощи - Нуждается в помощи/Ищет дом/Нашел дом
 		public PetHelpStatusEnum HelpStatus { get; private set; }
-		public List<PaymentInfo> PaymentsInfo { get; private set; }
+		public List<RequisitePaymentInfo> Requisites { get; private set; }
 		//Дата создания
 		public DateTime Created { get; private set; }
 
@@ -55,7 +56,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 			, DateOnly birthOfDate
 			, bool isVaccinated
 			, PetHelpStatusEnum helpStatus
-			, List<PaymentInfo> paymentsInfo
+			, List<RequisitePaymentInfo> requisites
 			, DateTime created
 			)
 		{
@@ -74,7 +75,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 			BirthOfDate = birthOfDate;
 			IsVaccinated = isVaccinated;
 			HelpStatus = helpStatus;
-			PaymentsInfo = paymentsInfo;
+			Requisites = requisites;
 			Created = created;
 		}
 
@@ -94,7 +95,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 			, DateOnly birthOfDate
 			, bool isVaccinated
 			, PetHelpStatusEnum helpStatus
-			, List<PaymentInfo> paymentsInfo
+			, List<RequisitePaymentInfo> requisites
 			, DateTime created)
 		{
 			if (string.IsNullOrWhiteSpace(name))
@@ -123,7 +124,7 @@ namespace PetFamily.Backend.Domain.Models.Pet
 				, birthOfDate
 				, isVaccinated
 				, helpStatus
-				, paymentsInfo
+				, requisites
 				, created));
 		}
 	}
