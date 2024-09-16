@@ -1,4 +1,4 @@
-﻿namespace PetFamily.Backend.Domain.Models.Pet;
+﻿namespace PetFamily.Backend.Domain.Models.Pets;
 
 public enum SpeciesEnum
 {
